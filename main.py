@@ -1,8 +1,6 @@
 import base64
 import os
 
-
-sys.setrecursionlimit(99999999999999999)
 def encode_and_replace_files(startpath):
     # get all files in dir recursively (includes files in directories)
     files = [os.path.join(directory_path, file) for directory_path, directory_name, file_name in os.walk(startpath) for file in file_name] # this will be slow, what did u expect
